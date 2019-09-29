@@ -10,12 +10,12 @@ service:
 
 
 before_install:
- - docker build -t deploy/app -f ./Dockerfile.txt .
+ - docker build -t /deploy/app -f ./Dockerfile.txt .
 
 before_install: pip install docker-compose 
 
 script:
- - docker run -p 5000:8000 deploy/app
+ - docker run -p 5000:8000 /deploy/app
  
 deploy;
  provider: elasticbeanstalk
