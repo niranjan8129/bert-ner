@@ -15,4 +15,17 @@ before_install:
 before_install: pip install docker-compose 
 
 script:
- - docker run -p 5000:8000 bert-ner:v1 
+ - docker run -p 5000:8000 bert-ner:v1 -- --coverage 
+ 
+deploy;
+ provider: elasticbeanstalk
+ region: "ap-south-1"
+ app: "bertner"
+ env: "Bertner-env"
+ bucket_name: "elasticbeanstalk-ap-south-1-238543985800"
+ bucket_path: "bertner"
+ on:
+   branch: master
+ access_key_id: $AWS_ACCESS_KEY
+ secret_access_key:
+   secure: "$AWS_SECRET_KEY"
