@@ -15,4 +15,4 @@ before_install:
 before_install: pip install docker-compose 
 
 script:
- - docker run -p 5000:8000 bert-ner:v1 -- --coverage 
+ - docker run -p 5000:8000 bert-ner:v1 
