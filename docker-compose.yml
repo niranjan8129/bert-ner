@@ -1,0 +1,10 @@
+version: '1.1'
+services: 
+  jupyter:
+    image: bert-ner
+    build: 
+    dockerfile: ./Dockerfile.txt
+    command: 
+    ports: 
+    - "5000:5000"
+    

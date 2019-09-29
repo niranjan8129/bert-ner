@@ -1,0 +1,15 @@
+pytorch-pretrained-bert>=0.6.2
+pytorch-transformers>=1.2.0
+torch>=1.2.0
+# metric
+seqeval>=0.0.12
+# training progressbar
+tqdm>=4.36.1
+# tokeniztion
+nltk>=3.4.5
+# for rest api
+Flask>=1.1.1
+Flask-Cors>=3.0.8
+Flask-Bootstrap>=3.3.7.1
+Werkzeug>=0.16.0
+flake8>=3.6.0
