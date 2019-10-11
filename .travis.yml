@@ -10,7 +10,7 @@ service:
 
 before_install:
  - pip install docker-compose
- - docker build -t ner-bert:v1 -f ./Dockerfile.txt .
+ - docker build -t ner-bert:v1 -f ./Dockerfile .
 
 after_install:
   - docker images
