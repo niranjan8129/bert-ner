@@ -29,5 +29,3 @@ WORKDIR /deploy/app
 
 # run the application
 CMD ["python", "/deploy/app/app.py"]
-
-
