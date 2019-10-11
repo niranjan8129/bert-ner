@@ -23,7 +23,7 @@ script:
 after_script:
 - docker rm -f app  
 
-deploy;
+deploy:
  provider: elasticbeanstalk
  region: "ap-south-1"
  app: "bertner"
