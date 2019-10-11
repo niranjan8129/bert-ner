@@ -10,6 +10,8 @@ RUN mkdir -p /deploy/app
 COPY ./ /deploy/app
 
 RUN pip install gunicorn
+RUN pip install -r /deploy/app/requirements.txt
+ 
 
 # Setup nginx
 RUN rm /etc/nginx/sites-enabled/default && \
@@ -25,7 +27,6 @@ RUN mkdir -p /var/log/supervisor && \
 
 RUN apt-get clean;
 
-RUN pip install -r /deploy/app/requirements.txt
 
 WORKDIR /deploy/app
 
