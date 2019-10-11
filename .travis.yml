@@ -12,10 +12,13 @@ service:
 before_install:
  - docker build -t ner-bert:v1 -f ./Dockerfile.txt .
 
+after_script:
+  - docker images
+
 script:
- - docker run -p 5000:8000 ner-bert:v1 -- --coverage 
+ - docker run -p 5000:8000 ner-bert:v1 
 
 after_success:
-  - coveralls
+ docker ps | grep -q ner-bert:v1
 
 
