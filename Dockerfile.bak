@@ -11,6 +11,8 @@ COPY ./ /deploy/app
 
 RUN pip install gunicorn
 
+RUN pip install -r /deploy/app/requirements.txt
+
 # Setup nginx
 RUN rm /etc/nginx/sites-enabled/default && \
 	cp /deploy/app/flask.conf /etc/nginx/sites-available/ && \
@@ -24,8 +26,6 @@ RUN mkdir -p /var/log/supervisor && \
 
 
 RUN apt-get clean;
-
-RUN pip install -r /deploy/app/requirements.txt
 
 WORKDIR /deploy/app
 
