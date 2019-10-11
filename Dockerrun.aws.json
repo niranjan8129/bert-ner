@@ -1,0 +1,24 @@
+{
+  "AWSEBDockerrunVersion": 1,
+  "volumes": [
+  ],
+  "containerDefinitions": [
+    {
+      "name": "bertner",
+      "image": "ner-bert:v1",
+      "update": true,
+      "essential": true,
+      "memory": 400,
+      "environment": [
+      ],
+      "mountPoints": [
+      ],
+      "portMappings": [
+        {
+          "hostPort": 5000,
+          "containerPort": 5000
+        }
+      ]
+    }
+  ]
+}
