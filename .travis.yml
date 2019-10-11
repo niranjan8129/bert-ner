@@ -22,7 +22,7 @@ script:
  - docker exec app python -m unittest discover
 
 after_script:
-- docker rm -f app
+- docker rm -f app  
 
 deploy;
  provider: elasticbeanstalk
