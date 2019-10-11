@@ -309,9 +309,9 @@ def main():
                         type=int,
                         help="Total batch size for eval.")
     parser.add_argument("--learning_rate",
-                        default=5e-5,
+                        default=1e-5,
                         type=float,
-                        help="The initial learning rate for Adam.")
+                        help="The initial learning rate for Adam 5e-5 2e-5 .")
     parser.add_argument("--num_train_epochs",
                         default=3.0,
                         type=float,
