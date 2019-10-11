@@ -1,6 +1,6 @@
 FROM python:3.7.4
 
-EXPOSE 5000
+EXPOSE 80
 
 RUN apt-get update && \
     apt-get install -y nginx supervisor;
