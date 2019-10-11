@@ -8,7 +8,6 @@ python:
 service:
  - docker
 
-
 before_install:
  - pip install docker-compose
  - docker build -t ner-bert:v1 -f ./Dockerfile.txt .
