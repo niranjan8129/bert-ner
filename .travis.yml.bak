@@ -20,6 +20,7 @@ script:
  - docker ps -a
  - docker exec app python -m unittest discover
 
+
 deploy:
  provider: elasticbeanstalk
  region: "ap-south-1"
