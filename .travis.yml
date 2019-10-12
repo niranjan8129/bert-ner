@@ -26,10 +26,10 @@ after_script:
 deploy:
  provider: elasticbeanstalk
  region: "ap-south-1"
- app: "bertner"
+ app: "bert-ner"
  env: "BertNer-env"
  bucket_name: "elasticbeanstalk-ap-south-1-238543985800"
- bucket_path: "bertner"
+ bucket_path: "bert-ner"
  on:
    branch: master
  access_key_id: $AWS_ACCESS_KEY
