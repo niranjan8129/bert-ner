@@ -10,14 +10,13 @@ service:
 
 before_install:
  - pip install docker-compose
- - docker build -t ner-bert:v1 -f ./Dockerfile .
+ - docker build -t bert-ner:v1 -f ./Dockerfile .
 
 after_install:
   - docker images 
-  - docker rm -f app 
 
 script:
- - docker run -d --name app  -p 80:80 ner-bert:v1 
+ - docker run -d --name app  -p 80:80 bert-ner:v1 
  - docker ps -a
  - docker exec app python -m unittest discover
 
