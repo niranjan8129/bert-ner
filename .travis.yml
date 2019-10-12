@@ -27,7 +27,7 @@ deploy:
  provider: elasticbeanstalk
  region: "ap-south-1"
  app: "bertner"
- env: "Bertner-env"
+ env: "BertNer-env"
  bucket_name: "elasticbeanstalk-ap-south-1-238543985800"
  bucket_path: "bertner"
  on:
