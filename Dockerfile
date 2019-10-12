@@ -29,7 +29,7 @@ RUN mkdir -p /var/log/supervisor && \
 
 RUN apt-get clean;
 
-FROM ngnix
+FROM nginx
 EXPOSE 80
 
 WORKDIR /deploy/app
