@@ -2,6 +2,10 @@ FROM python:3.7.4
 
 EXPOSE 80
 
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends \
+      install build-essential
+
 RUN apt-get update && \
     apt-get install -y nginx supervisor;
 
