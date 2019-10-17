@@ -1,3 +1,6 @@
+pytorch-pretrained-bert>=0.6.2
+pytorch-transformers>=1.2.0
+torch>=1.2.0
 # metric
 seqeval>=0.0.12
 # training progressbar
@@ -10,4 +13,3 @@ Flask-Cors>=3.0.8
 Flask-Bootstrap>=3.3.7.1
 Werkzeug>=0.16.0
 flake8>=3.6.0
- 
