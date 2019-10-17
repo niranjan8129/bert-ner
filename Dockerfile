@@ -1,7 +1,5 @@
 FROM python:3.7.4
 
-EXPOSE 80
-
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends \
       install build-essential
@@ -30,6 +28,10 @@ RUN mkdir -p /var/log/supervisor && \
 
 
 RUN apt-get clean;
+
+FROM nginx
+EXPOSE 80
+
 
 WORKDIR /deploy/app
 
