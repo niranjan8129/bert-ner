@@ -31,6 +31,8 @@ RUN mkdir -p /var/log/supervisor && \
 
 RUN apt-get clean;
 
+
+
 WORKDIR /deploy/app
 
 # run the application

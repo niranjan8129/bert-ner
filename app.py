@@ -4,7 +4,7 @@ from flask import Flask,render_template,url_for,request
 from flask_bootstrap import Bootstrap 
 from werkzeug import secure_filename
 
-from bert import Ner
+#from bert import Ner
 
 app = Flask(__name__)
 #CORS(app)
@@ -18,11 +18,11 @@ def index():
 @app.route('/predict', methods=['POST', 'GET'])
 def predict():
     if request.method == 'POST':
-        model = Ner("/deploy/app/model")
+        #model = Ner("/deploy/app/model")
         #text = request.json["query"]
         text =request.form["query"]
         try:
-            out = model.predict(text)
+            #out = model.predict(text)
             #return jsonify({"result":out})
             #return render_template("results.html", prediction =out ,name =text)
             #return render_template("results.html", prediction =jsonify(out) ,name =text)

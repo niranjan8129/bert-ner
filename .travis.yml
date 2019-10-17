@@ -16,12 +16,9 @@ after_install:
   - docker images 
 
 script:
- - docker run -d --name app  -p 80:80 bert-ner:v2 
+ - docker run -d --name app -p 5000:8000 bert-ner:v2 
  - docker ps -a
  - docker exec app python -m unittest discover
-
-after_script:
-- docker rm -f app 
 
 deploy:
  provider: elasticbeanstalk
